@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const isLoggedIn = localStorage.getItem('userEmail'); 
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    const isComingToLogin = urlParams.get('action') === 'login';
+
+    if (!isLoggedIn) {
+        if (!isComingToLogin) {
+            window.location.replace('#'); 
+        }
+    } else {
+   }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GI28 X S0T</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #ffffff; --fg: #000000; --accent: #000000; --glass: rgba(255, 255, 255, 0.7); --border: rgba(0, 0, 0, 0.1); }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--fg); overflow-y: auto; display: flex; align-items: flex-start; justify-content: center;  padding-top: 60px; min-height: 100vh; }
+        .glass-card { background: var(--glass); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--border); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.05); border-radius: 24px; width: 100%; max-width: 400px; padding: 40px; position: relative; z-index: 10; transition: opacity 0.3s; }
+        .input-style { width: 100%; background: #f9f9f9; border: 1px solid #eeeeee; border-radius: 12px; padding: 14px 16px; margin-top: 8px; transition: all 0.3s ease; outline: none; }
+        .input-style:focus { border-color: var(--accent); background: #ffffff; box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.02); }
+        .btn-primary { width: 100%; background: var(--accent); color: #ffffff; font-weight: 600; padding: 16px; border-radius: 12px; margin-top: 24px; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; }
+        .btn-primary:active { transform: scale(0.96); }
+        #transition-circle { position: fixed; top: 50%; left: 50%; width: 0; height: 0; background: var(--accent); border-radius: 50%; transform: translate(-50%, -50%); z-index: 9999; pointer-events: none; transition: width 0.8s ease-in, height 0.8s ease-in; }
+        .expanding { width: 300vmax !important; height: 300vmax !important; }
+        .tab-btn { font-size: 0.9rem; font-weight: 500; color: #666; padding-bottom: 8px; border-bottom: 2px solid transparent; transition: all 0.3s; }
+        .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+        .hidden { display: none; }
+        .loader { border: 2px solid #f3f3f3; border-top: 2px solid #000; border-radius: 50%; width: 18px; height: 18px; animation: spin 0.8s linear infinite; display: inline-block; margin-right: 8px; vertical-align: middle; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        #auto-loader { position: fixed; inset: 0; background: #fff; z-index: 50; display: flex; justify-content: center; align-items: center; font-weight: bold; flex-direction: column; gap: 10px;}
+    </style>
+</head>
+<body>
+
+    <div id="auto-loader">
+        <div class="loader" style="width:30px; height:30px; border-width:3px;"></div>
+        <p class="text-sm text-gray-500">Restoring Session...</p>
+    </div>
+
+    <div id="transition-circle"></div>
+
+    <div class="glass-card hidden" id="main-card">
+        <div class="text-center mb-8"<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
+<h1 style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px;" 
+class="text-2xl font-bold tracking-tight">
+  S0T X GI28
+</h1>
+            <p class="text-gray-400 text-sm mt-1">Our Platform is RIGGED! Play in your responsibility!</p>
+        </div>
+
+        <div class="flex gap-6 mb-8 border-b border-gray-100">
+            <button onclick="switchTab('login')" id="login-tab" class="tab-btn active">Login</button>
+            <button onclick="switchTab('signup')" id="signup-tab" class="tab-btn">Sign Up</button>
+        </div>
+
+        <form id="login-form">
+            <div><label class="text-xs font-semibold uppercase tracking-wider text-gray-500">Unique Domain</label><input type="email" id="login-email" class="input-style" placeholder="number@example.com" required></div>
+            <div class="mt-4"><label class="text-xs font-semibold uppercase tracking-wider text-gray-500">Password</label><input type="password" id="login-password" class="input-style" placeholder="6wg#sv@g%c@n[>0/\/\" required></div>
+            <button type="submit" class="btn-primary" id="login-btn"><span id="login-text">Sign In</span></button>
+        </form>
+
+        <form id="signup-form" class="hidden">
+            <div class="grid grid-cols-2 gap-4">
+                <div><label class="text-xs font-semibold uppercase tracking-wider text-gray-500">Username</label><input type="text" id="sup-user" class="input-style" placeholder="your_name" required></div>
+                <div><label class="text-xs font-semibold uppercase tracking-wider text-gray-500">WhatsApp</label><input type="tel" id="sup-phone" class="input-style" placeholder="+91..." required></div>
+            </div>
+          <div class="mt-4">
+  <label class="text-xs font-semibold uppercase tracking-wider text-gray-500">Unique Domain</label>
+
+  <div class="flex mt-2">
+    <input 
+      type="text" 
+      id="email-name" 
+      class="input-style rounded-r-none"
+      placeholder="phonenumber"
+      required
+    >
+
+    <select 
+      id="email-domain" 
+      class="input-style rounded-l-none border-l-0 w-40"
+    >
+      <option value="@coldcase.in">@coldcase.in</option>
+      <option value="custom">Custom</option>
+    </select>
+  </div>
+
+  <input 
+    type="text" 
+    id="custom-domain" 
+    class="input-style mt-2 hidden"
+    placeholder="@name"
+  >
+</div>
+            <div class="mt-4 grid grid-cols-2 gap-4">
+                <div><label class="text-xs font-semibold uppercase tracking-wider text-gray-500">Password</label><input type="password" id="sup-pass" class="input-style" placeholder="••••" required></div>
+                <div><label class="text-xs font-semibold uppercase tracking-wider text-gray-500">Confirm</label><input type="password" class="input-style" placeholder="••••" required></div>
+            </div>
+            <div class="mt-4"><label class="text-xs font-semibold uppercase tracking-wider text-gray-500">Referral Code (Optional)</label><input type="text" id="sup-ref" class="input-style" placeholder="COLDXXXX"></div>
+            <button type="submit" id="sup-btn" class="btn-primary">Create Account</button>
+        </form>
+        
+        <p id="error-msg" class="text-red-500 text-xs mt-4 text-center hidden"></p>
+    </div>
+<!-- FLOATING HELP BUTTON -->
+<button id="help-btn" class="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-black text-white text-xl shadow-lg">
+  ?
+</button>
+
+<!-- GLASS GUIDE POPUP -->
+<div id="guide-popup" class="fixed inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm z-50 hidden">
+  <div class="bg-white/60 backdrop-blur-xl border border-white/30 rounded-2xl p-6 w-[90%] max-w-sm shadow-2xl text-black">
+    
+    <p class="font-semibold mb-2">How to use:</p>
+
+    <p class="text-sm mb-1">1. For Trying Simulation use <b>number@name</b> in UNIQUE DOMAIN field! </p>
+    <p class="text-sm mb-1">2. For Real Trading use <b>number@coldcase.in</b> in UNIQUE DOMAIN field!</p>
+    <p class="text-sm mb-3">
+      You can get prediction via 
+      <a href="https://t.me/SOT_PREDICTORbot" style="color:red;">Official Bot</a>
+    </p>
+
+    <button onclick="closeGuide()" class="w-full bg-black text-white py-2 rounded-lg mt-3">
+      Understood
+    </button>
+  </div>
+</div>
+
+<!-- DISCLAIMER POPUP -->
+<div id="disclaimer-popup" class="fixed inset-0 flex items-center justify-center bg-black/40 z-50 hidden">
+  <div class="bg-red-600 text-white rounded-2xl p-6 w-[90%] max-w-sm shadow-2xl">
+    
+    <h2 class="font-bold text-lg mb-2">⚠ Disclaimer</h2>
+    
+    <p class="text-sm leading-relaxed">
+      This platform involves simulated or real trading activities which may carry financial risk. 
+      Trading can become addictive and may lead to financial loss. Please participate responsibly 
+      and only trade with funds you can afford to lose. 
+      We are not responsible for any losses incurred.
+    </p>
+
+    <button onclick="closeDisclaimer()" class="w-full bg-white text-red-600 py-2 rounded-lg mt-4 font-semibold">
+      I Understand
+    </button>
+  </div>
+</div>
+<script>
+    // --- 1. AUTO REDIRECT LOGIC ---
+    async function checkExistingSession() {
+        const savedEmail = localStorage.getItem('userEmail');
+        if (savedEmail) {
+            try {
+                const res = await fetch('/api/auth', {
+                    method: 'POST', headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ action: 'check', email: savedEmail })
+                });
+                const data = await res.json();
+                if (data.success) {
+                    window.location.replace(data.redirectUrl);
+                    return;
+                }
+            } catch (e) {}
+        }
+        document.getElementById('auto-loader').style.display = 'none';
+        document.getElementById('main-card').classList.remove('hidden');
+    }
+    checkExistingSession();
+
+    // --- 2. TABS LOGIC ---
+    function switchTab(tab) {
+        document.getElementById('error-msg').classList.add('hidden');
+        if (tab === 'login') {
+            document.getElementById('login-form').classList.remove('hidden');
+            document.getElementById('signup-form').classList.add('hidden');
+            document.getElementById('login-tab').classList.add('active');
+            document.getElementById('signup-tab').classList.remove('active');
+        } else {
+            document.getElementById('login-form').classList.add('hidden');
+            document.getElementById('signup-form').classList.remove('hidden');
+            document.getElementById('login-tab').classList.remove('active');
+            document.getElementById('signup-tab').classList.add('active');
+        }
+    }
+
+    function triggerCircle(url) {
+        const circle = document.getElementById('transition-circle');
+        circle.classList.add('expanding');
+        setTimeout(() => { window.location.href = url; }, 700);
+    }
+
+    // --- 3. LOGIN LOGIC ---
+    document.getElementById('login-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = document.getElementById('login-email').value;
+        const password = document.getElementById('login-password').value;
+        const btn = document.getElementById('login-btn');
+        const btnText = document.getElementById('login-text');
+        const errorMsg = document.getElementById('error-msg');
+
+        btn.disabled = true;
+        btnText.innerHTML = '<span class="loader"></span> Authenticating...';
+        errorMsg.classList.add('hidden');
+
+        try {
+            const res = await fetch('/api/auth', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ action: 'login', email, password })
+            });
+            const data = await res.json();
+
+            if (data.success) {
+                localStorage.setItem('userEmail', email);
+                triggerCircle(data.redirectUrl);
+            } else {
+                throw new Error(data.message || 'Invalid Credentials');
+            }
+        } catch (err) {
+            btn.disabled = false;
+            btnText.innerHTML = 'Sign In';
+            errorMsg.innerText = err.message;
+            errorMsg.classList.remove('hidden');
+        }
+    });
+
+    // --- 4. DOMAIN SELECT LOGIC ---
+    const domainSelect = document.getElementById('email-domain');
+    const customInput = document.getElementById('custom-domain');
+    const nameInput = document.getElementById('email-name');
+
+    domainSelect.addEventListener('change', () => {
+        if (domainSelect.value === 'custom') {
+            customInput.classList.remove('hidden');
+        } else {
+            customInput.classList.add('hidden');
+        }
+    });
+
+    // Auto detect @ typing
+    nameInput.addEventListener('input', (e) => {
+        if (e.target.value.includes('@')) {
+            const parts = e.target.value.split('@');
+            nameInput.value = parts[0];
+            domainSelect.value = 'custom';
+            customInput.classList.remove('hidden');
+            customInput.value = '@' + parts[1];
+        }
+    });
+
+    // --- 5. SIGNUP LOGIC (UPDATED EMAIL SYSTEM) ---
+    document.getElementById('signup-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = document.getElementById('sup-btn');
+        const errorMsg = document.getElementById('error-msg');
+
+        const name = nameInput.value;
+        const domain = domainSelect.value;
+        const customDomain = customInput.value;
+
+        let finalEmail;
+
+        // Validation
+        if (!name) {
+            errorMsg.innerText = "Enter email username";
+            errorMsg.classList.remove('hidden');
+            return;
+        }
+
+        if (domain === 'custom') {
+            if (!customDomain.startsWith('@')) {
+                errorMsg.innerText = "Custom domain must start with @";
+                errorMsg.classList.remove('hidden');
+                return;
+            }
+            finalEmail = name + customDomain;
+        } else {
+            finalEmail = name + domain;
+        }
+
+        const payload = {
+            action: 'signup',
+            username: document.getElementById('sup-user').value,
+            phone: document.getElementById('sup-phone').value,
+            email: finalEmail,
+            password: document.getElementById('sup-pass').value,
+            referral: document.getElementById('sup-ref').value
+        };
+
+        btn.disabled = true;
+        btn.innerText = "Creating Account...";
+        errorMsg.classList.add('hidden');
+
+        try {
+            const res = await fetch('/api/auth', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+
+            const data = await res.json();
+
+            if (data.success) {
+                localStorage.setItem('userEmail', finalEmail);
+                triggerCircle(data.redirectUrl);
+            } else {
+                throw new Error(data.message || 'Signup Failed');
+            }
+        } catch (err) {
+            btn.disabled = false;
+            btn.innerText = "Create Account";
+            errorMsg.innerText = err.message;
+            errorMsg.classList.remove('hidden');
+        }
+    });
+    // POPUP CONTROL
+const guide = document.getElementById('guide-popup');
+const disclaimer = document.getElementById('disclaimer-popup');
+
+// Show guide first time
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        guide.classList.remove('hidden');
+    }, 500);
+});
+
+function closeGuide() {
+    guide.classList.add('hidden');
+    setTimeout(() => {
+        disclaimer.classList.remove('hidden');
+    }, 300);
+}
+
+function closeDisclaimer() {
+    disclaimer.classList.add('hidden');
+}
+
+// Floating button trigger
+document.getElementById('help-btn').addEventListener('click', () => {
+    guide.classList.remove('hidden');
+});
+</script>
+</body>
+</html>
