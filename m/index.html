@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STORZEN | List, Reel & Sleep!</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        neu: { bg: '#e0e5ec', text: '#2d3748', muted: '#718096', dark: '#a3b1c6', light: '#ffffff', brand: '#667eea' }
+                    },
+                    boxShadow: {
+                        'neu-flat': '9px 9px 16px rgb(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5)',
+                        'neu-pressed': 'inset 6px 6px 10px rgb(163, 177, 198, 0.6), inset -6px -6px 10px rgba(255, 255, 255, 0.5)',
+                        'neu-sm': '5px 5px 10px rgb(163, 177, 198, 0.5), -5px -5px 10px rgba(255, 255, 255, 0.6)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #e0e5ec;
+            color: #2d3748;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        
+        /* Smooth liquid transitions */
+        .neu-element {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .neu-button {
+            transition: all 0.2s ease-in-out;
+        }
+        .neu-button:active {
+            box-shadow: inset 6px 6px 10px rgb(163, 177, 198, 0.6), inset -6px -6px 10px rgba(255, 255, 255, 0.5);
+            transform: translateY(2px);
+        }
+        
+        /* Hide scrollbar for horizontal sections */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="antialiased selection:bg-neu-brand selection:text-white">
+
+    <header class="sticky top-0 z-50 bg-[#e0e5ec]/80 backdrop-blur-md border-b border-white/20 shadow-sm neu-element">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-2 cursor-pointer">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-neu-brand">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+                <span class="text-xl font-bold tracking-tight text-neu-text">STORZEN</span>
+            </div>
+            <a href="/login" class="w-12 h-12 rounded-full shadow-neu-sm flex items-center justify-center neu-button text-neu-text bg-neu-bg">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <section class="max-w-7xl mx-auto px-6 pt-16 pb-24 flex flex-col md:flex-row items-center justify-between gap-12">
+        <div class="w-full md:w-1/2 flex flex-col gap-6 text-center md:text-left">
+            <h1 class="text-5xl md:text-6xl font-bold leading-tight tracking-tight text-neu-text">
+                List, Reel & <span class="text-neu-brand">Sleep!</span>
+            </h1>
+            <p class="text-lg text-neu-muted max-w-lg mx-auto md:mx-0">
+                The easy creator commerce platform for digital sellers. Build your minimal store, sell via UPI, and let the system do the rest.
+            </p>
+            <div class="flex items-center justify-center md:justify-start gap-4 pt-4">
+                <a href="/signup" class="px-8 py-4 rounded-xl shadow-neu-flat font-semibold text-neu-brand neu-button bg-neu-bg">
+                    Start Your Store
+                </a>
+                <a href="#how-it-works" class="px-8 py-4 rounded-xl shadow-neu-pressed font-medium text-neu-muted neu-button bg-neu-bg">
+                    Learn More
+                </a>
+            </div>
+        </div>
+
+        <div class="w-full md:w-1/2 relative h-[400px] flex items-center justify-center">
+            <div class="absolute w-[80%] h-64 rounded-3xl shadow-neu-flat bg-neu-bg p-6 flex flex-col justify-between animate-[bounce_6s_infinite]">
+                <div class="flex justify-between items-center text-neu-muted text-sm font-medium">
+                    <span>Revenue Trend</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18M18 9l-5 5-4-4-5 5"/></svg>
+                </div>
+                <div class="w-full h-32 flex items-end justify-between gap-2">
+                    <div class="w-full bg-neu-dark/20 rounded-t-md h-1/3"></div>
+                    <div class="w-full bg-neu-dark/30 rounded-t-md h-1/2"></div>
+                    <div class="w-full bg-neu-brand/50 rounded-t-md h-3/4 shadow-[0_0_15px_rgba(102,126,234,0.4)]"></div>
+                    <div class="w-full bg-neu-dark/20 rounded-t-md h-2/3"></div>
+                </div>
+            </div>
+            <div class="absolute -bottom-4 right-4 md:-right-8 bg-neu-bg rounded-2xl shadow-neu-flat p-6 flex gap-8 z-10">
+                <div>
+                    <p class="text-xs text-neu-muted font-semibold uppercase tracking-wider">Total Sellers</p>
+                    <p class="text-2xl font-bold text-neu-text mt-1">12.4K+</p>
+                </div>
+                <div>
+                    <p class="text-xs text-neu-muted font-semibold uppercase tracking-wider">Total Orders</p>
+                    <p class="text-2xl font-bold text-neu-text mt-1">890K+</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-neu-bg/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 text-neu-text">Why Choose STORZEN?</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="p-8 rounded-3xl shadow-neu-pressed bg-neu-bg">
+                    <h3 class="text-xl font-semibold mb-6 text-neu-muted flex items-center gap-3">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6M9 9l6 6"/></svg>
+                        Other Platforms
+                    </h3>
+                    <ul class="space-y-4 text-neu-muted">
+                        <li class="flex gap-3"><span class="w-1.5 h-1.5 rounded-full bg-neu-dark mt-2"></span>Paid signup & limits</li>
+                        <li class="flex gap-3"><span class="w-1.5 h-1.5 rounded-full bg-neu-dark mt-2"></span>Complicated KYC processes</li>
+                        <li class="flex gap-3"><span class="w-1.5 h-1.5 rounded-full bg-neu-dark mt-2"></span>Clunky, outdated UI</li>
+                        <li class="flex gap-3"><span class="w-1.5 h-1.5 rounded-full bg-neu-dark mt-2"></span>High merchant account fees</li>
+                    </ul>
+                </div>
+
+                <div class="p-8 rounded-3xl shadow-neu-flat bg-neu-bg border border-white/40">
+                    <h3 class="text-xl font-semibold mb-6 text-neu-brand flex items-center gap-3">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+                        STORZEN
+                    </h3>
+                    <ul class="space-y-4 text-neu-text font-medium">
+                        <li class="flex gap-3"><span class="w-1.5 h-1.5 rounded-full bg-neu-brand mt-2 shadow-[0_0_8px_rgba(102,126,234,0.6)]"></span>Free signup starting at ₹0/mo</li>
+                        <li class="flex gap-3"><span class="w-1.5 h-1.5 rounded-full bg-neu-brand mt-2 shadow-[0_0_8px_rgba(102,126,234,0.6)]"></span>No mandatory KYC for basics</li>
+                        <li class="flex gap-3"><span class="w-1.5 h-1.5 rounded-full bg-neu-brand mt-2 shadow-[0_0_8px_rgba(102,126,234,0.6)]"></span>Premium Neumorphic UI</li>
+                        <li class="flex gap-3"><span class="w-1.5 h-1.5 rounded-full bg-neu-brand mt-2 shadow-[0_0_8px_rgba(102,126,234,0.6)]"></span>UPI Deeplink direct payments</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="py-24 max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-16 text-neu-text">How It Works</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="p-6 rounded-2xl shadow-neu-flat bg-neu-bg text-center flex flex-col items-center neu-element hover:-translate-y-2">
+                <div class="w-12 h-12 rounded-full shadow-neu-pressed flex items-center justify-center mb-4 text-neu-brand font-bold">1</div>
+                <h4 class="font-semibold text-neu-text">Setup Store</h4>
+            </div>
+            <div class="p-6 rounded-2xl shadow-neu-flat bg-neu-bg text-center flex flex-col items-center neu-element hover:-translate-y-2">
+                <div class="w-12 h-12 rounded-full shadow-neu-pressed flex items-center justify-center mb-4 text-neu-brand font-bold">2</div>
+                <h4 class="font-semibold text-neu-text">Add Products</h4>
+            </div>
+            <div class="p-6 rounded-2xl shadow-neu-flat bg-neu-bg text-center flex flex-col items-center neu-element hover:-translate-y-2">
+                <div class="w-12 h-12 rounded-full shadow-neu-pressed flex items-center justify-center mb-4 text-neu-brand font-bold">3</div>
+                <h4 class="font-semibold text-neu-text">Share Links</h4>
+            </div>
+            <div class="p-6 rounded-2xl shadow-neu-flat bg-neu-bg text-center flex flex-col items-center neu-element hover:-translate-y-2">
+                <div class="w-12 h-12 rounded-full shadow-neu-pressed flex items-center justify-center mb-4 text-neu-brand font-bold">4</div>
+                <h4 class="font-semibold text-neu-text">Get Payouts</h4>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-neu-bg/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8 text-neu-text">Simple Pricing</h2>
+            
+            <div class="flex justify-center mb-12">
+                <div class="p-1 rounded-full shadow-neu-pressed bg-neu-bg inline-flex">
+                    <button class="px-6 py-2 rounded-full shadow-neu-flat bg-neu-bg text-neu-brand font-medium text-sm transition-all">Monthly</button>
+                    <button class="px-6 py-2 rounded-full text-neu-muted font-medium text-sm transition-all hover:text-neu-text">Yearly</button>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-3xl shadow-neu-flat bg-neu-bg flex flex-col">
+                    <h3 class="text-xl font-bold text-neu-muted mb-2">Free Plan</h3>
+                    <p class="text-4xl font-bold text-neu-text mb-6">₹0<span class="text-sm text-neu-muted font-normal">/mo</span></p>
+                    <ul class="space-y-4 mb-8 flex-grow text-sm text-neu-muted">
+                        <li>100 product listings</li>
+                        <li>7% commission on sales</li>
+                        <li>Unlimited orders</li>
+                        <li>Instant digital delivery</li>
+                    </ul>
+                    <a href="/signup" class="w-full py-4 text-center rounded-xl shadow-neu-pressed font-medium text-neu-text neu-button bg-neu-bg">Get Started</a>
+                </div>
+
+                <div class="p-8 rounded-3xl shadow-neu-flat bg-neu-bg flex flex-col relative border border-white/50 transform md:-translate-y-4">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-neu-brand text-white px-4 py-1 rounded-full text-xs font-semibold shadow-[0_4px_10px_rgba(102,126,234,0.4)]">POPULAR</div>
+                    <h3 class="text-xl font-bold text-neu-brand mb-2">Pro Plan</h3>
+                    <p class="text-4xl font-bold text-neu-text mb-6">₹299<span class="text-sm text-neu-muted font-normal">/mo</span></p>
+                    <ul class="space-y-4 mb-8 flex-grow text-sm text-neu-text font-medium">
+                        <li>Unlimited product listings</li>
+                        <li>5% commission on sales</li>
+                        <li>Verified badge eligibility</li>
+                        <li>Up to 5 boosted products</li>
+                    </ul>
+                    <a href="/signup" class="w-full py-4 text-center rounded-xl shadow-neu-flat font-bold text-neu-brand neu-button bg-neu-bg">Upgrade Pro</a>
+                </div>
+
+                <div class="p-8 rounded-3xl shadow-neu-flat bg-neu-bg flex flex-col">
+                    <h3 class="text-xl font-bold text-neu-muted mb-2">Max Plan</h3>
+                    <p class="text-4xl font-bold text-neu-text mb-6">₹999<span class="text-sm text-neu-muted font-normal">/mo</span></p>
+                    <ul class="space-y-4 mb-8 flex-grow text-sm text-neu-muted">
+                        <li>Everything in Pro</li>
+                        <li>Advanced AI automation placeholder</li>
+                        <li>Up to 9 boosted products</li>
+                        <li>Advanced store customization</li>
+                    </ul>
+                    <a href="/signup" class="w-full py-4 text-center rounded-xl shadow-neu-pressed font-medium text-neu-text neu-button bg-neu-bg">Go Max</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="pt-24 pb-12 border-t border-white/20">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-2 mb-4">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-neu-brand"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    <span class="text-xl font-bold text-neu-text">STORZEN</span>
+                </div>
+                <p class="text-neu-muted mb-6">List, Reel & Sleep! The minimalist, creator-first platform designed for modern digital selling.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full shadow-neu-sm flex items-center justify-center text-neu-muted hover:text-neu-brand neu-button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                    <a href="#" class="w-10 h-10 rounded-full shadow-neu-sm flex items-center justify-center text-neu-muted hover:text-neu-brand neu-button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold text-neu-text mb-4">Platform</h4>
+                <ul class="space-y-3 text-neu-muted text-sm">
+                    <li><a href="/discovery" class="hover:text-neu-brand transition-colors">Discovery</a></li>
+                    <li><a href="/pricing" class="hover:text-neu-brand transition-colors">Pricing</a></li>
+                    <li><a href="/about" class="hover:text-neu-brand transition-colors">About Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-neu-text mb-4">Legal</h4>
+                <ul class="space-y-3 text-neu-muted text-sm">
+                    <li><a href="/privacy-policy" class="hover:text-neu-brand transition-colors">Privacy Policy</a></li>
+                    <li><a href="/terms" class="hover:text-neu-brand transition-colors">Terms of Service</a></li>
+                    <li><a href="/contact" class="hover:text-neu-brand transition-colors">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center text-sm text-neu-muted">
+            &copy; 2026 STORZEN. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
